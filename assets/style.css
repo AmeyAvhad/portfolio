@@ -12,7 +12,10 @@
 body{background:var(--bg);color:var(--text);font-family:"Inter",sans-serif;line-height:1.6;}
 html{scroll-behavior:smooth;}
 
-/* ===== NAVIGATION ===== */
+
+/* =========================================
+   NAVIGATION
+========================================= */
 header{
   position:fixed;top:0;width:100%;
   backdrop-filter:blur(12px);
@@ -34,7 +37,8 @@ header{
 }
 .nav-right a:hover{color:var(--lav);}
 
-/* ===== HAMBURGER ===== */
+
+/* ----- HAMBURGER MENU ----- */
 .hamburger{
   display:none;background:none;border:none;
   color:var(--lav);font-size:1.8rem;cursor:pointer;
@@ -44,8 +48,7 @@ header{
   background:rgba(28,27,38,.85);
   backdrop-filter:blur(10px);
   width:100%;max-height:0;overflow:hidden;
-  text-align:center;
-  transition:max-height .4s ease;
+  text-align:center;transition:max-height .4s ease;
 }
 .mobile-nav.show{display:flex;max-height:350px;}
 .mobile-nav li{padding:14px 0;list-style:none;}
@@ -59,43 +62,55 @@ header{
   .hamburger{display:block;}
 }
 
-/* ===== HERO ===== */
+
+/* =========================================
+   HERO SECTION
+========================================= */
 .hero{
-  padding-top:140px;padding-bottom:60px;
-  display:flex;justify-content:center;
+  padding-top:140px;
+  padding-bottom:60px;
+  display:flex;
+  justify-content:center;
 }
+
 .hero-container{
-  width:min(900px, 90%);
+  width:var(--section-width);
   margin:auto;
-  display:flex;flex-wrap:wrap;
+  display:flex;
+  flex-wrap:wrap;
   justify-content:space-between;
-  align-items:center;
+  align-items:flex-start;
   gap:2.5rem;
   text-align:left;
 }
+
 .hero-photo{
   flex:0 1 260px;
   display:flex;
   justify-content:center;
   order:1;
 }
+
 .hero-photo img{
-  width:100%;
-  max-width:230px;
+  width:230px;
+  height:230px;
+  object-fit:cover;
   border-radius:50%;
   border:3px solid var(--lav);
-  object-fit:cover;
   box-shadow:0 4px 16px var(--shadow);
 }
+
 .intro{
   flex:1 1 380px;
   max-width:480px;
   order:2;
 }
+
 @media(max-width:750px){
   .hero-container{
     flex-direction:column;
     text-align:center;
+    align-items:center;
   }
   .intro{text-align:center;}
   .hero-buttons{justify-content:center;}
@@ -109,7 +124,10 @@ header{
   flex-wrap:wrap;
 }
 
-/* ===== BUTTONS ===== */
+
+/* =========================================
+   BUTTONS
+========================================= */
 .btn,.btn-outline,.btn-icon{
   display:inline-flex;align-items:center;justify-content:center;
   padding:0 clamp(.8rem,1.2vw,1.2rem);
@@ -128,7 +146,10 @@ header{
 }
 .btn-icon:hover{background:var(--lav);color:var(--bg);}
 
-/* ===== SECTIONS ===== */
+
+/* =========================================
+   STANDARD SECTIONS
+========================================= */
 .section{
   width:var(--section-width);margin:auto;
   padding:clamp(2rem,4vw,3rem) 0;
@@ -139,7 +160,10 @@ h2{
   text-transform:capitalize;
 }
 
-/* ===== CARD ===== */
+
+/* =========================================
+   CARD UI
+========================================= */
 .card{
   background:var(--card);
   padding:clamp(1rem,2vw,1.5rem);
@@ -152,7 +176,10 @@ h2{
 .role-title{font-size:clamp(1rem,1.8vw,1.3rem);font-weight:700;}
 .card-summary{color:var(--text-dim);font-size:clamp(.8rem,1.2vw,1rem);}
 
-/* ===== EXPERIENCE EXPAND ===== */
+
+/* =========================================
+   EXPERIENCE EXPANDABLE
+========================================= */
 .details{
   display:none;margin-top:.7rem;padding-top:.6rem;
   border-top:1px solid rgba(255,255,255,.12);
@@ -163,7 +190,10 @@ h2{
 }
 .more-btn:hover,.hide-btn:hover{text-shadow:0 0 8px var(--lav);}
 
-/* ===== PROJECTS ===== */
+
+/* =========================================
+   PROJECTS GRID
+========================================= */
 .project-container{
   display:flex;gap:clamp(1rem,2vw,1.4rem);
   flex-wrap:wrap;
@@ -173,7 +203,10 @@ h2{
   min-width:260px;
 }
 
-/* ===== SKILLS ===== */
+
+/* =========================================
+   SKILLS GRID
+========================================= */
 .skills-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(110px,1fr));
@@ -186,13 +219,19 @@ h2{
   margin-top:6px;color:var(--text-dim);
 }
 
-/* ===== PUBLICATIONS ===== */
+
+/* =========================================
+   PUBLICATIONS
+========================================= */
 .pub-list li{margin-bottom:15px;font-size:.98rem;}
 .pub-authors{color:var(--lav);}
 .pub-link{color:var(--lav);text-decoration:none;}
 .pub-link:hover{text-decoration:underline;}
 
-/* ===== FOOTER ===== */
+
+/* =========================================
+   FOOTER
+========================================= */
 footer{display:flex;justify-content:center;padding:3rem 0;}
 .footer-container{
   width:var(--section-width);background:var(--card);
@@ -212,7 +251,10 @@ footer{display:flex;justify-content:center;padding:3rem 0;}
   color:white;
 }
 
-/* ===== FADE ==== */
+
+/* =========================================
+   ANIMATION — FADE IN
+========================================= */
 .fade-section{
   opacity:0;transform:translateY(25px);
   transition:opacity .8s,transform .8s;
