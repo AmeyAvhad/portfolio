@@ -1,4 +1,4 @@
-// ==== MOBILE NAV ====
+// ===== MOBILE NAV =====
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburgerBtn");
   const mobileNav = document.getElementById("mobileNav");
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// ==== BREADCRUMB ~/ UPDATE ====
+// ===== BREADCRUMB ~/ UPDATE =====
 document.addEventListener("DOMContentLoaded",()=>{
   const navLabel=document.querySelector(".nav-left");
   const sections=document.querySelectorAll("section");
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 
-// ==== EXPERIENCE EXPAND ====
+// ===== EXPERIENCE EXPAND =====
 document.addEventListener("click",e=>{
   if(e.target.classList.contains("more-btn")){
     const card=e.target.closest(".exp-card");
@@ -56,7 +56,7 @@ document.addEventListener("click",e=>{
 });
 
 
-// ==== FADE ANIMATION ====
+// ===== FADE ANIMATION =====
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting) e.target.classList.add("fade-visible");
