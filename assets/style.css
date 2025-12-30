@@ -18,7 +18,7 @@ body{
 html{scroll-behavior:smooth;}
 
 
-/* ===== NAV ===== */
+/* NAV */
 header{
   position:fixed;
   top:0;
@@ -32,14 +32,15 @@ header{
   width:var(--section-width);
   margin:auto;
   display:flex;
-  justify-content:space-between;
+  justify-content:flex-start;
   align-items:center;
-  padding:clamp(.6rem,2vw,1rem) 0;
+  gap:2rem;
 }
 .nav-left{
   font-family:monospace;
   font-size:clamp(1rem,2vw,1.25rem);
   color:var(--lav);
+  margin-right:auto;
 }
 .nav-right{
   display:flex;
@@ -54,8 +55,7 @@ header{
 }
 .nav-right a:hover{color:var(--lav);}
 
-
-/* ===== HAMBURGER ===== */
+/* hamburger */
 .hamburger{
   display:none;
   background:none;
@@ -97,7 +97,7 @@ header{
 }
 
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
   padding-top:140px;
   padding-bottom:60px;
@@ -106,7 +106,7 @@ header{
 }
 
 .hero-container{
-  width:var(--section-width);
+  width:min(90%,950px);
   margin:auto;
   padding-top:1.4rem;
   padding-bottom:1.4rem;
@@ -126,14 +126,14 @@ header{
   transform:translateY(0);
 }
 
-/* Text LEFT (order 1) */
+/* text left */
 .intro{
   flex:1 1 auto;
   max-width:480px;
   order:1;
 }
 
-/* Photo RIGHT (order 2) */
+/* photo right */
 .hero-photo{
   flex:0 0 auto;
   flex-shrink:0;
@@ -151,7 +151,7 @@ header{
   box-shadow:0 6px 18px rgba(0,0,0,.45);
 }
 
-/* Tablet */
+/* tablet */
 @media(max-width:900px){
   .hero-container{
     flex-wrap:wrap;
@@ -172,7 +172,7 @@ header{
   }
 }
 
-/* Mobile */
+/* phone */
 @media(max-width:600px){
   .hero-photo img{
     width:200px;
@@ -201,7 +201,7 @@ header{
 }
 
 
-/* ===== BUTTONS ===== */
+/* BUTTONS */
 .btn,.btn-outline,.btn-icon{
   display:inline-flex;
   align-items:center;
@@ -239,7 +239,7 @@ header{
 }
 
 
-/* ===== SECTIONS ===== */
+/* SECTION */
 .section{
   width:var(--section-width);
   margin:auto;
@@ -253,7 +253,7 @@ h2{
 }
 
 
-/* ===== CARD UI ===== */
+/* CARDS */
 .card{
   background:var(--card);
   padding:clamp(1rem,2vw,1.5rem);
@@ -273,7 +273,7 @@ h2{
 }
 
 
-/* ===== EXPERIENCE EXPAND ===== */
+/* EXPAND */
 .details{
   display:none;
   margin-top:.7rem;
@@ -291,7 +291,7 @@ h2{
 .more-btn:hover,.hide-btn:hover{text-shadow:0 0 8px var(--lav);}
 
 
-/* ===== PROJECTS ===== */
+/* PROJECTS */
 .project-container{
   display:flex;
   gap:clamp(1rem,2vw,1.4rem);
@@ -303,7 +303,7 @@ h2{
 }
 
 
-/* ===== SKILLS ===== */
+/* SKILLS */
 .skills-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(110px,1fr));
@@ -321,7 +321,7 @@ h2{
 }
 
 
-/* ===== PUBLICATIONS ===== */
+/* PUBLICATIONS */
 .pub-list li{
   margin-bottom:15px;
   font-size:.98rem;
@@ -336,7 +336,7 @@ h2{
 .pub-link:hover{text-decoration:underline;}
 
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
   display:flex;
   justify-content:center;
@@ -369,7 +369,7 @@ footer{
 }
 
 
-/* ===== SCROLL FADE ===== */
+/* FADE SCROLL */
 .fade-section{
   opacity:0;
   transform:translateY(25px);
