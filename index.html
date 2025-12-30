@@ -5,136 +5,183 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amey Rajesh Avhad – AI & Robotics Researcher</title>
 
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/style.css" />
-  <!-- Script -->
   <script defer src="assets/script.js"></script>
 </head>
 <body>
+
+<!-- PARTICLES BACKGROUND -->
+<canvas id="particles"></canvas>
 
 <!-- NAV -->
 <header>
   <nav class="main-nav">
     <div class="nav-left">~/</div>
 
-    <button class="hamburger" id="hamburgerBtn">
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger">
       <i class="fa-solid fa-bars"></i>
     </button>
 
-    <ul class="nav-right desktop-nav">
+    <ul class="nav-right" id="nav-menu">
       <li><a href="#home">Home</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#publications">Publications</a></li>
+
+      <!-- ☀️ / 🌙 toggle -->
+      <li>
+        <button id="theme-toggle" class="theme-btn">
+          <i class="fa-solid fa-sun" id="theme-icon"></i>
+        </button>
+      </li>
+
+      <!-- 🎨 Accent Color Selector -->
+      <li class="accent-wrapper">
+        <button id="accent-toggle" class="accent-btn">
+          🎨 <span id="accent-name">Lavender</span> ▼
+        </button>
+
+        <div id="accent-menu" class="accent-menu">
+          <div class="accent-option" data-color="rosewater" data-hex="#dc8a78">Rosewater</div>
+          <div class="accent-option" data-color="flamingo" data-hex="#dd7878">Flamingo</div>
+          <div class="accent-option" data-color="pink" data-hex="#ea76cb">Pink</div>
+          <div class="accent-option" data-color="mauve" data-hex="#8839ef">Mauve</div>
+          <div class="accent-option" data-color="lavender" data-hex="#7287fd">Lavender</div>
+          <div class="accent-option" data-color="red" data-hex="#d20f39">Red</div>
+          <div class="accent-option" data-color="maroon" data-hex="#e64553">Maroon</div>
+          <div class="accent-option" data-color="peach" data-hex="#fe640b">Peach</div>
+          <div class="accent-option" data-color="yellow" data-hex="#df8e1d">Yellow</div>
+          <div class="accent-option" data-color="green" data-hex="#40a02b">Green</div>
+          <div class="accent-option" data-color="teal" data-hex="#179299">Teal</div>
+          <div class="accent-option" data-color="sky" data-hex="#04a5e5">Sky</div>
+          <div class="accent-option" data-color="sapphire" data-hex="#209fb5">Sapphire</div>
+          <div class="accent-option" data-color="blue" data-hex="#1e66f5">Blue</div>
+        </div>
+
+        <!-- MOBILE DOT GRID -->
+        <div id="accent-dots" class="accent-dots">
+          <div class="dot" data-color="rosewater" data-hex="#dc8a78"></div>
+          <div class="dot" data-color="flamingo" data-hex="#dd7878"></div>
+          <div class="dot" data-color="pink" data-hex="#ea76cb"></div>
+          <div class="dot" data-color="mauve" data-hex="#8839ef"></div>
+          <div class="dot" data-color="lavender" data-hex="#7287fd"></div>
+          <div class="dot" data-color="red" data-hex="#d20f39"></div>
+          <div class="dot" data-color="maroon" data-hex="#e64553"></div>
+          <div class="dot" data-color="peach" data-hex="#fe640b"></div>
+          <div class="dot" data-color="yellow" data-hex="#df8e1d"></div>
+          <div class="dot" data-color="green" data-hex="#40a02b"></div>
+          <div class="dot" data-color="teal" data-hex="#179299"></div>
+          <div class="dot" data-color="sky" data-hex="#04a5e5"></div>
+          <div class="dot" data-color="sapphire" data-hex="#209fb5"></div>
+          <div class="dot" data-color="blue" data-hex="#1e66f5"></div>
+        </div>
+      </li>
     </ul>
   </nav>
-
-  <ul class="mobile-nav" id="mobileNav">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#publications">Publications</a></li>
-  </ul>
 </header>
-
 
 <!-- HERO -->
 <section id="home" class="hero fade-section">
   <div class="hero-container">
-
-    <!-- LEFT = Text -->
     <div class="intro">
       <h1 class="name">Amey Rajesh Avhad</h1>
       <p class="tagline">AI & Robotics Researcher</p>
       <p class="summary">
-        Robotics & Deep Learning researcher with experience in medical imaging, multimodal AI systems,
-        embedded ML, computer vision, and assistive robotics. Research at IIT Kharagpur, NCCU Taiwan,
-        and NYCU Taiwan including hyperspectral cancer diagnostics and robotic arm control.
+        Deep Learning & Robotics researcher focusing on Medical Imaging AI, Computer Vision, Embedded ML,
+        P4 Networking and Assistive Robotics. Research experience across IIT Kharagpur (India), NCCU Taiwan
+        & NYCU Taiwan.
       </p>
 
       <div class="hero-buttons">
         <a href="mailto:avhadamey3@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i> Contact</a>
         <a href="https://github.com/AmeyAvhad" target="_blank" class="btn-icon"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/amey-avhad-9620911ba/" target="_blank" class="btn-icon"><i class="fab fa-linkedin"></i></a>
-        <a href="resume.pdf" download class="btn-outline">Resume</a>
+        <a href="assets/Amey_resume.pdf" class="btn-outline" download>Resume</a>
       </div>
     </div>
 
-    <!-- RIGHT = Photo -->
     <div class="hero-photo">
-      <img src="assets/amey_cropped.jpg" alt="Amey Rajesh Avhad Profile Photo">
+      <img src="assets/amey_cropped.jpg" alt="Amey Rajesh Avhad" />
     </div>
-
   </div>
 </section>
 
-
-<!-- EXPERIENCE -->
+<!-- EXPERIENCE — ORIGINAL CONTENT RESTORED EXACTLY -->
 <section id="experience" class="section fade-section">
   <h2>Experience</h2>
 
+  <!-- NYCU -->
   <div class="card exp-card fade-section">
-    <h3 class="role-title">Research Intern | NYCU Taiwan</h3>
-    <p class="card-summary"><strong>Jun 2025 – Sep 2025 | Assistive Robotics + Multimodal AI</strong></p>
-    <button class="more-btn">More Details ▾</button>
+    <h3 class="role-title">Research Intern | National Yang Ming Chiao Tung University (NYCU), Taiwan</h3>
+    <p class="card-summary"><strong>Jun 2025 – Sep 2025 | Assistive Robotics + Multi-Modal AI</strong></p>
+    <button class="details-toggle">More Details ▾</button>
     <div class="details">
       <ul>
-        <li>Kinova wheelchair robotic arm automation.</li>
-        <li>Voice → LLM → vision → robotic control pipeline.</li>
-        <li>YOLO-E + YOLO-v11 dual inference.</li>
+        <li>Developed an AI-powered assistive robotic arm integrated with an electric wheelchair to autonomously
+            recognize, interpret, and execute human commands for item retrieval for convenience store items such as drinks,
+            rice balls, etc.</li>
+        <li>Integrated multimodal AI modules, combining Whisper for speech recognition, Gemma 3–4B LLM for
+            semantic inference, and vision-based grasp prediction for seamless human-robot interaction.</li>
+        <li>Designed a dual vision pipeline using YOLO-E (zero-shot) and fine-tuned YOLOv11 for accurate multi-
+            modal object detection and segmentation</li>
+        <li>Programmed and controlled the Kinova Gen2 robotic arm using NVIDIA Isaac SDK and integrated Grasp-
+            Gen, a diffusion-based framework for 6-DOF grasping, enabling real-time motion planning.</li>
+        <li>Deployed all models locally to ensure low latency and high data privacy during operation.</li>
       </ul>
-      <button class="hide-btn">Hide ▲</button>
     </div>
   </div>
 
+  <!-- NCCU -->
   <div class="card exp-card fade-section">
-    <h3 class="role-title">Research Intern | NCCU Taiwan</h3>
+    <h3 class="role-title">Research Intern | National Chung Cheng University (NCCU), Taiwan</h3>
     <p class="card-summary"><strong>May 2024 – Sep 2024 | Medical AI – Hyperspectral Imaging</strong></p>
-    <button class="more-btn">More Details ▾</button>
+    <button class="details-toggle">More Details ▾</button>
     <div class="details">
       <ul>
-        <li>Esophageal cancer detection using SAVE-HSI vs WLI imaging.</li>
-        <li>Benchmarked YOLOv7, YOLOv8, Scaled-YOLOv4, EfficientNet.</li>
-        <li>93.4% sensitivity — Q1 Diagnostics (2025).</li>
+        <li>Developed and optimized multiple YOLO models (YOLOv8, YOLOv7, YOLOv6, ScaledYOLOv4, YOLOv3)
+            for esophageal cancer detection using hyperspectral imaging datasets</li>
+        <li>Conducted a comparative performance analysis between White Light Imaging (WLI) datasets and Narrow
+            Band Imaging (NBI) datasets obtained through the Spectrum Aided Visual Enhancer (SAVE) method,
+            demonstrating superior performance of SAVE in esophageal cancer detection</li>
+        <li>Achieved an average 10% improvement in precision, 8% higher recall, and 23% increase in mAP50,
+            enhancing detection and classification performance</li>
+        <li>Paper accepted in Diagnostics (Q1 SCIE) – published 2025.</li>
       </ul>
-      <button class="hide-btn">Hide ▲</button>
     </div>
   </div>
 
+  <!-- IIT-KGP -->
   <div class="card exp-card fade-section">
-    <h3 class="role-title">Research Intern | IIT Kharagpur</h3>
-    <p class="card-summary"><strong>Dec 2023 – Mar 2024 | IoT • Firmware • SDN • P4-ML</strong></p>
-    <button class="more-btn">More Details ▾</button>
+    <h3 class="role-title">Research Intern | IIT Kharagpur, India</h3>
+    <p class="card-summary"><strong>Dec 2023 – Mar 2024 | IoT Firmware, DSCP Packet Networking, P4 Switch ML</strong></p>
+    <button class="details-toggle">More Details ▾</button>
     <div class="details">
       <ul>
-        <li>Custom MicroPython firmware enabling DSCP control.</li>
-        <li>P4 switch + BMV2 integrated ML classifier.</li>
-        <li>Latency ↓38%, packet loss ↓24% in Mininet tests.</li>
+        <li>Developed custom MicroPython firmware enabling DSCP packet QoS prioritization.</li>
+        <li>Implemented ML inference inside P4-BMv2 switch pipeline.</li>
+        <li>Evaluated on Mininet SDN testbed – reduced latency by ~38% & packet-loss by 24%.</li>
       </ul>
-      <button class="hide-btn">Hide ▲</button>
     </div>
   </div>
-</section>
 
+</section>
 
 <!-- EDUCATION -->
 <section id="education" class="section fade-section">
   <h2>Education</h2>
   <div class="card">
-    <h3 class="role-title">B.Tech Computer Engineering</h3>
-    <p><strong>University:</strong> Savitribai Phule Pune University</p>
+    <h3 class="role-title">B.Tech — Computer Engineering</h3>
     <p><strong>CGPA:</strong> 9.09 / 10</p>
+    <p><strong>University:</strong> Savitribai Phule Pune University</p>
     <p><strong>Graduation:</strong> 2025</p>
-    <p><strong>Relevant Courses:</strong> ML, DL, Data Structures, IoT, OS, Cloud, DBMS</p>
+    <p><strong>Key Coursework:</strong> Deep Learning, Neural Networks, Data Science, IoT, Computer Networks, OS, HPC,
+       Database Systems, Cloud Computing.</p>
   </div>
 </section>
-
 
 <!-- PROJECTS -->
 <section id="projects" class="section fade-section">
@@ -142,40 +189,37 @@
   <div class="project-container">
     <div class="project-card card fade-section">
       <h3 class="role-title">Assistive Robotic Arm</h3>
-      <p>Kinova + Whisper + YOLO — object retrieval automation.</p>
+      <p>Voice + CV controlled robotic arm — Kinova Gen2, Whisper, YOLO-E</p>
     </div>
     <div class="project-card card fade-section">
-      <h3 class="role-title">PillCounter</h3>
-      <p>PyQt + YOLOv8 — pharmacy medicine counter.</p>
+      <h3 class="role-title">PillCounter App</h3>
+      <p>YOLOv8 pill counter — PyQt realtime pharma automation</p>
     </div>
   </div>
   <div class="project-container">
     <div class="project-card card fade-section">
-      <h3 class="role-title">Esophageal Cancer Using HSI</h3>
-      <p>Hyperspectral outperforming WLI — 93.4% sensitivity.</p>
+      <h3 class="role-title">Esophageal Cancer Detection – HSI</h3>
+      <p>SAVE dataset beats WLI detection dramatically</p>
     </div>
     <div class="project-card card fade-section">
-      <h3 class="role-title">Drone Detection</h3>
-      <p>YOLOv5 for aerial vehicle detection — IEEE paper.</p>
+      <h3 class="role-title">Drone Object Detector</h3>
+      <p>YOLOv5 aerial detector — mAP 97.25%</p>
     </div>
   </div>
 </section>
-
 
 <!-- SKILLS -->
 <section id="skills" class="section fade-section">
   <h2>Skills</h2>
   <div class="skills-grid">
-    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><p>Python</p></div>
-    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"><p>PyTorch</p></div>
-    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"><p>TensorFlow</p></div>
-    <div class="skill fade-section"><img src="https://raw.githubusercontent.com/ultralytics/assets/main/logo/ultralytics-icon.svg"><p>YOLO</p></div>
-    <div class="skill fade-section"><img src="https://raw.githubusercontent.com/micropython/micropython/master/docs/_static/python-logo.png"><p>MicroPython</p></div>
-    <div class="skill fade-section"><img src="https://raw.githubusercontent.com/p4lang/p4lang.github.io/master/images/p4-logo-light.png"><p>P4</p></div>
-    <div class="skill fade-section"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/OpenFlow_logo.svg"><p>SDN</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /><p>Python</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" /><p>PyTorch</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" /><p>TensorFlow</p></div>
+    <div class="skill fade-section"><img src="https://raw.githubusercontent.com/ultralytics/assets/main/logo/ultralytics-icon.svg" /><p>YOLO</p></div>
+    <div class="skill fade-section"><img src="https://raw.githubusercontent.com/micropython/micropython/master/docs/_static/python-logo.png" /><p>MicroPython</p></div>
+    <div class="skill fade-section"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/OpenFlow_logo.svg" /><p>SDN</p></div>
   </div>
 </section>
-
 
 <!-- PUBLICATIONS -->
 <section id="publications" class="section fade-section">
@@ -183,22 +227,26 @@
   <div class="card">
     <ol class="pub-list">
       <li>
-        <strong>Esophageal Cancer Detection using Hyperspectral Imaging</strong> — Diagnostics (Q1, 2025)<br>
-        <span class="pub-authors">Amey R. Avhad, et al.</span>
+        <strong>Esophageal Cancer Detection using Hyperspectral Imaging and Deep Learning</strong><br>
+        <span class="pub-authors">Amey R. Avhad, et al.</span> — Diagnostics Journal (Q1 SCIE), 2025.<br>
+        SAVE dataset tested with YOLO-v8, v7, Scaled-YOLOv4, EfficientNet.<br>
+        <em>mAP = 93.4%, Sensitivity boost for early cancer lesions</em><br>
+        DOI: <a href="https://doi.org/10.3390/diagnostics15131686" class="pub-link" target="_blank">Link</a>
       </li>
       <li>
-        <strong>Drone Vehicle Detection using YOLOv5</strong> — IEEE ICACCV (2024)<br>
-        <span class="pub-authors">Amey R. Avhad, et al.</span>
+        <strong>Drone-based Vehicle and Building Detection using YOLOv5</strong><br>
+        <span class="pub-authors">Amey R. Avhad, et al.</span> — IEEE ICACCV 2024.<br>
+        <em>mAP = 97.25% outperforming CNN baseline (78%)</em><br>
+        DOI: <a href="https://doi.org/10.1109/ICSTSN61422.2024.10671298" class="pub-link" target="_blank">Link</a>
       </li>
     </ol>
   </div>
 </section>
 
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-container">
-    <span class="footer-text">© 2025 — @Amey</span>
+    <span class="footer-text">© 2025 Amey Avhad</span>
     <div class="footer-icons">
       <a href="mailto:avhadamey3@gmail.com"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://github.com/AmeyAvhad" target="_blank"><i class="fab fa-github"></i></a>
