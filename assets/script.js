@@ -1,4 +1,4 @@
-// ===== MOBILE NAV =====
+// ==== MOBILE NAV ====
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburgerBtn");
   const mobileNav = document.getElementById("mobileNav");
@@ -15,33 +15,32 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// ===== BREADCRUMB ~/ UPDATE =====
+// ==== BREADCRUMB ~/ ====
 document.addEventListener("DOMContentLoaded",()=>{
   const navLabel=document.querySelector(".nav-left");
   const sections=document.querySelectorAll("section");
-  const navLinks=document.querySelectorAll(".nav-right a, .mobile-nav a");
+  const links=document.querySelectorAll(".desktop-nav a, .mobile-nav a");
 
   function setLabel(id){
     navLabel.textContent = id==="home" ? "~/" : `~/${id.toLowerCase()}`;
   }
 
   window.addEventListener("scroll",()=>{
-    let pos = window.scrollY + 160;
+    let y=window.scrollY+140;
     sections.forEach(sec=>{
-      if(pos>=sec.offsetTop && pos<sec.offsetTop + sec.offsetHeight){
+      if(y>=sec.offsetTop && y<sec.offsetTop+sec.offsetHeight){
         setLabel(sec.id);
       }
     });
   });
 
-  navLinks.forEach(a=>a.addEventListener("click",()=>{
-    const id = a.getAttribute("href").replace("#","");
-    setLabel(id);
+  links.forEach(a=>a.addEventListener("click",()=>{
+    setLabel(a.getAttribute("href").replace("#",""));
   }));
 });
 
 
-// ===== EXPERIENCE EXPAND =====
+// ==== EXPERIENCE TOGGLE ====
 document.addEventListener("click",e=>{
   if(e.target.classList.contains("more-btn")){
     const card=e.target.closest(".exp-card");
@@ -56,11 +55,17 @@ document.addEventListener("click",e=>{
 });
 
 
-// ===== FADE ANIMATION =====
-const observer = new IntersectionObserver(entries=>{
+// ==== FADE-IN ON SCROLL ====
+const observer=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting) e.target.classList.add("fade-visible");
   });
 },{threshold:0.2});
-
 document.querySelectorAll(".fade-section").forEach(el=>observer.observe(el));
+
+
+// ==== HERO ON-LOAD FADE ====
+document.addEventListener("DOMContentLoaded",()=>{
+  const hero=document.querySelector(".hero-container");
+  if(hero) setTimeout(()=>hero.classList.add("fade-visible"),150);
+});

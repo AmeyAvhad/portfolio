@@ -11,17 +11,15 @@
 </head>
 <body>
 
-<!-- ===== NAVIGATION ===== -->
+<!-- NAV -->
 <header>
   <nav class="main-nav">
     <div class="nav-left">~/</div>
 
-    <!-- Hamburger (mobile) -->
     <button class="hamburger" id="hamburgerBtn">
       <i class="fa-solid fa-bars"></i>
     </button>
 
-    <!-- Desktop Nav -->
     <ul class="nav-right desktop-nav">
       <li><a href="#home">Home</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -32,7 +30,6 @@
     </ul>
   </nav>
 
-  <!-- Mobile Nav -->
   <ul class="mobile-nav" id="mobileNav">
     <li><a href="#home">Home</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -44,23 +41,20 @@
 </header>
 
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section id="home" class="hero fade-section">
   <div class="hero-container">
 
-    <!-- Photo (first on mobile) -->
-    <div class="hero-photo">
-      <img src="assets/amey_cropped.jpg" alt="Amey Photo" />
-    </div>
-
+    <!-- Text LEFT (desktop) -->
     <div class="intro">
       <h1 class="name">Amey Rajesh Avhad</h1>
       <p class="tagline">AI & Robotics Researcher</p>
       <p class="summary">
-        Deep Learning & Robotics researcher focusing on Medical Imaging AI, Embedded ML, Computer Vision,
-        P4 Networking, and Assistive Robotics. Research internships at IIT Kharagpur (India), 
-        NCCU Taiwan, and NYCU Taiwan.
+        Robotics & Deep Learning researcher with experience in medical imaging, embedded systems,
+        multimodal vision-LLM systems, and SDN-based networking. Research internships at IIT Kharagpur,
+        NCCU Taiwan, and NYCU Taiwan working on hyperspectral cancer detection and assistive robotic arms.
       </p>
+
       <div class="hero-buttons">
         <a href="mailto:avhadamey3@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i> Contact</a>
         <a href="https://github.com/AmeyAvhad" target="_blank" class="btn-icon"><i class="fab fa-github"></i></a>
@@ -69,25 +63,29 @@
       </div>
     </div>
 
+    <!-- Photo RIGHT -->
+    <div class="hero-photo">
+      <img src="assets/amey_cropped.jpg" alt="Profile Photo">
+    </div>
+
   </div>
 </section>
 
 
-<!-- ===== EXPERIENCE ===== -->
+<!-- EXPERIENCE -->
 <section id="experience" class="section fade-section">
   <h2>Experience</h2>
 
   <div class="card exp-card fade-section">
-    <h3 class="role-title">Research Intern | National Yang Ming Chiao Tung University, Taiwan</h3>
+    <h3 class="role-title">Research Intern | NYCU Taiwan</h3>
     <p class="card-summary"><strong>Jun 2025 – Sep 2025 | Assistive Robotics + Multi-Modal AI</strong></p>
     <button class="more-btn">More Details ▾</button>
     <div class="details">
       <ul>
-        <li>Wheelchair-mounted assistive robotic arm using Kinova Gen2.</li>
-        <li>Whisper + Gemma-LLM + YOLO-E multimodal interaction commands.</li>
-        <li>Dual-vision inference: YOLO-E + YOLOv11-finetuned.</li>
-        <li>Jetson Xavier low-latency accelerated inference.</li>
-        <li>Grasp pose determination using GraspNet + Isaac SDK + ROS.</li>
+        <li>Worked on wheelchair-mounted Kinova robotic arm.</li>
+        <li>Integrated Whisper STT + Gemma-LLM + YOLO-E for multimodal commands.</li>
+        <li>Dual-vision inference: YOLO-E + YOLOv11 finetuned.</li>
+        <li>ROS + Isaac SDK grasp pose control.</li>
       </ul>
       <button class="hide-btn">Hide ▲</button>
     </div>
@@ -99,9 +97,9 @@
     <button class="more-btn">More Details ▾</button>
     <div class="details">
       <ul>
-        <li>Esophageal cancer detection using SAVE HSI dataset vs WLI imaging.</li>
-        <li>Benchmarked: YOLOv8, YOLOv7, Scaled-YOLOv4, EfficientNet, ResNet.</li>
-        <li>Achieved 93.4% sensitivity (↑ from 80.1% baseline) — Q1 journal (Diagnostics) publication.</li>
+        <li>Esophageal cancer detection using SAVE-HSI vs WLI imaging.</li>
+        <li>Benchmarked YOLOv8, YOLOv7, Scaled-YOLOv4, EfficientNet, ResNet.</li>
+        <li>93.4% sensitivity — Q1 Diagnostics Journal (2025).</li>
       </ul>
       <button class="hide-btn">Hide ▲</button>
     </div>
@@ -109,13 +107,13 @@
 
   <div class="card exp-card fade-section">
     <h3 class="role-title">Research Intern | IIT Kharagpur</h3>
-    <p class="card-summary"><strong>Dec 2023 – Mar 2024 | IoT Firmware, P4 Switch ML</strong></p>
+    <p class="card-summary"><strong>Dec 2023 – Mar 2024 | IoT + Firmware + P4-ML SDN</strong></p>
     <button class="more-btn">More Details ▾</button>
     <div class="details">
       <ul>
-        <li>Developed custom MicroPython firmware for DSCP value manipulation.</li>
-        <li>Embedded ML models into P4 BMV2 switch packet pipeline.</li>
-        <li>SDN simulation: ↓ latency ~38% & ↓ packet-loss ~24%.</li>
+        <li>Developed MicroPython firmware for DSCP socket customization.</li>
+        <li>Integrated AI into a P4 switch pipeline using BMv2.</li>
+        <li>Mininet SDN simulation showed ↓ latency (38%) & ↓ packet loss (24%).</li>
       </ul>
       <button class="hide-btn">Hide ▲</button>
     </div>
@@ -123,48 +121,46 @@
 </section>
 
 
-<!-- ===== EDUCATION ===== -->
+<!-- EDUCATION -->
 <section id="education" class="section fade-section">
   <h2>Education</h2>
   <div class="card">
-    <h3 class="role-title">B.Tech — Computer Engineering</h3>
+    <h3 class="role-title">B.Tech – Computer Engineering</h3>
     <p><strong>CGPA:</strong> 9.09 / 10</p>
     <p><strong>University:</strong> Savitribai Phule Pune University</p>
     <p><strong>Graduation:</strong> 2025</p>
-    <p><strong>Key Courses:</strong> Deep Learning, Neural Networks, IoT, OS, DBMS, Cloud Computing.</p>
+    <p><strong>Relevant Courses:</strong> DL, IoT, OS, DBMS, Neural Networks, Cloud.</p>
   </div>
 </section>
 
 
-<!-- ===== PROJECTS ===== -->
+<!-- PROJECTS -->
 <section id="projects" class="section fade-section">
   <h2>Projects</h2>
-
   <div class="project-container">
     <div class="project-card card fade-section">
       <h3 class="role-title">Assistive Robotic Arm</h3>
-      <p>Kinova Gen2 + ROS + Multimodal Pipeline — Assistive grasping.</p>
+      <p>Kinova + Whisper + YOLO + ROS — assistive object retrieval.</p>
     </div>
     <div class="project-card card fade-section">
-      <h3 class="role-title">PillCounter App</h3>
-      <p>YOLOv8 pill-counter with PyQt GUI — pharma automation.</p>
+      <h3 class="role-title">PillCounter</h3>
+      <p>YOLOv8 pill counting PyQt tool — pharma automation.</p>
     </div>
   </div>
-
   <div class="project-container">
     <div class="project-card card fade-section">
       <h3 class="role-title">Esophageal Cancer – HSI</h3>
-      <p>HSI SAVE dataset — outperforming WLI imaging for diagnosis.</p>
+      <p>Hyperspectral imaging outperforming WLI — 93.4% sensitivity.</p>
     </div>
     <div class="project-card card fade-section">
-      <h3 class="role-title">Drone Detector</h3>
-      <p>YOLOv5 aerial building/vehicle detection — mAP 97.25% (IEEE).</p>
+      <h3 class="role-title">Drone Object Detector</h3>
+      <p>YOLOv5 mAP 97.25% — IEEE ICACCV Paper.</p>
     </div>
   </div>
 </section>
 
 
-<!-- ===== SKILLS ===== -->
+<!-- SKILLS -->
 <section id="skills" class="section fade-section">
   <h2>Skills</h2>
   <div class="skills-grid">
@@ -179,27 +175,25 @@
 </section>
 
 
-<!-- ===== PUBLICATIONS ===== -->
+<!-- PUBLICATIONS -->
 <section id="publications" class="section fade-section">
   <h2>Publications</h2>
   <div class="card">
     <ol class="pub-list">
       <li>
-        <strong>Esophageal Cancer Detection using Hyperspectral Imaging</strong><br>
-        <span class="pub-authors">Amey R. Avhad, et al.</span> — Diagnostics (Q1), 2025.<br>
-        <em>mAP: 93.4% vs baseline 80.1%</em>
+        <strong>Esophageal Cancer Detection using Hyperspectral Imaging</strong> — Q1 Diagnostics (2025)<br>
+        <span class="pub-authors">Amey R. Avhad, et al.</span>
       </li>
       <li>
-        <strong>Drone-based Building & Vehicle Detection using YOLOv5</strong><br>
-        <span class="pub-authors">Amey R. Avhad, et al.</span> — IEEE ICACCV, 2024.<br>
-        <em>mAP: 97.25% outperforming CNN baseline</em>
+        <strong>Drone-based Building & Vehicle Detection using YOLOv5</strong> — IEEE ICACCV (2024)<br>
+        <span class="pub-authors">Amey R. Avhad, et al.</span>
       </li>
     </ol>
   </div>
 </section>
 
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-container">
     <span class="footer-text">© 2025 — @Amey</span>
