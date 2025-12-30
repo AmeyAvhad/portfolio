@@ -47,12 +47,19 @@
 <!-- 🔹 HERO -->
 <section id="home" class="hero fade-section">
   <div class="hero-container">
+
+    <!-- Photo FIRST on mobile -->
+    <div class="hero-photo">
+      <img src="assets/amey_cropped.jpg" alt="Amey Photo" />
+    </div>
+
     <div class="intro">
       <h1 class="name">Amey Rajesh Avhad</h1>
       <p class="tagline">AI & Robotics Researcher</p>
       <p class="summary">
-        Deep Learning & Robotics researcher focusing on Medical Imaging AI, Computer Vision, Embedded ML, P4 Networking
-        and Assistive Robotics. Research experience across IIT Kharagpur (India), NCCU Taiwan & NYCU Taiwan.
+        Deep Learning & Robotics researcher focusing on Medical Imaging AI, Embedded ML, Computer Vision,
+        P4 Networking, and Assistive Robotics. Research internships at IIT Kharagpur (India), NCCU Taiwan,
+        and NYCU Taiwan.
       </p>
       <div class="hero-buttons">
         <a href="mailto:avhadamey3@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i> Contact</a>
@@ -61,9 +68,7 @@
         <a href="resume.pdf" class="btn-outline" download>Resume</a>
       </div>
     </div>
-    <div class="hero-photo">
-      <img src="assets/amey_cropped.jpg" alt="Amey Photo" />
-    </div>
+
   </div>
 </section>
 
@@ -78,9 +83,9 @@
     <button class="more-btn">More Details ▾</button>
     <div class="details">
       <ul>
-        <li>Developed wheelchair-mounted assistive robotic arm using Kinova Gen2.</li>
-        <li>Integrated Whisper + Gemma-LLM + YOLO-E pipeline for multimodal commands.</li>
-        <li>Dual vision: YOLO-E + YOLOv11-finetuned.</li>
+        <li>Built wheelchair-mounted assistive robotic arm using Kinova Gen2.</li>
+        <li>Integrated Whisper (Speech-to-Text) + Gemma-LLM + YOLO-E pipeline for multimodal commands.</li>
+        <li>Dual-vision inference: YOLO-E + YOLOv11 finetuned.</li>
         <li>Jetson Xavier inference optimization.</li>
         <li>Grasp pose using GraspNet + Isaac SDK + ROS.</li>
       </ul>
@@ -94,10 +99,10 @@
     <button class="more-btn">More Details ▾</button>
     <div class="details">
       <ul>
-        <li>Esophageal cancer detection using SAVE (HSI) dataset vs WLI images.</li>
-        <li>Benchmarked YOLOv8, YOLOv7, Scaled-YOLOv4, EfficientNet.</li>
-        <li>Accuracy improved from 80.1% → 93.4% sensitivity.</li>
-        <li>Published in Diagnostics (Q1-SCIE), 2025.</li>
+        <li>Esophageal cancer detection using SAVE HSI vs WLI dataset.</li>
+        <li>Benchmarked YOLOv8, YOLOv7, Scaled-YOLOv4, EfficientNet, ResNet.</li>
+        <li>SAVE dataset improved lesion detection — 80.1% → 93.4% sensitivity.</li>
+        <li>Published in Diagnostics (Q1-SCIE) – 2025.</li>
       </ul>
       <button class="hide-btn">Hide ▲</button>
     </div>
@@ -109,9 +114,9 @@
     <button class="more-btn">More Details ▾</button>
     <div class="details">
       <ul>
-        <li>Built MicroPython-based firmware enabling DSCP packet QoS routing.</li>
-        <li>Integrated ML into P4-BMv2 packet pipeline.</li>
-        <li>Mininet tests showed ↓ latency 38% & ↓ packet loss 24%.</li>
+        <li>Developed MicroPython firmware enabling DSCP packet QoS control.</li>
+        <li>Embedded ML into P4-BMv2 switching pipeline for anomaly detection.</li>
+        <li>Mininet simulations showed ↓ latency 38% and ↓ packet loss 24%.</li>
       </ul>
       <button class="hide-btn">Hide ▲</button>
     </div>
@@ -127,7 +132,7 @@
     <p><strong>CGPA:</strong> 9.09 / 10</p>
     <p><strong>University:</strong> Savitribai Phule Pune University</p>
     <p><strong>Graduation:</strong> 2025</p>
-    <p><strong>Relevant Courses:</strong> Deep Learning, IoT, OS, DBMS, Neural Networks, Cloud Computing.</p>
+    <p><strong>Relevant Courses:</strong> Deep Learning, IoT, OS, Neural Networks, DBMS, Cloud Computing.</p>
   </div>
 </section>
 
@@ -136,24 +141,30 @@
 <section id="projects" class="section fade-section">
   <h2>Projects</h2>
   <div class="project-container">
+
     <div class="project-card card fade-section">
       <h3 class="role-title">Assistive Robotic Arm</h3>
-      <p>Kinova Gen2 + Whisper + YOLO-E + ROS – Assistive control for disabled users.</p>
+      <p>Kinova Gen2 + Whisper + YOLO-E + ROS — Assistive physical manipulation.</p>
     </div>
+
     <div class="project-card card fade-section">
       <h3 class="role-title">PillCounter App</h3>
-      <p>YOLOv8 pill counting app, PyQt interface, pharma automation.</p>
+      <p>YOLOv8 pill counting application — PyQt interface — pharma automation.</p>
     </div>
+
   </div>
   <div class="project-container">
+
     <div class="project-card card fade-section">
       <h3 class="role-title">Esophageal Cancer – HSI</h3>
-      <p>HSI SAVE dataset showing superior precision over WLI imaging.</p>
+      <p>HSI SAVE dataset – outperforming WLI imaging — medical diagnosis.</p>
     </div>
+
     <div class="project-card card fade-section">
       <h3 class="role-title">Drone Detector</h3>
-      <p>YOLOv5 aerial vehicle detection – mAP 97.25% – IEEE paper.</p>
+      <p>YOLOv5 drone-based building & vehicle detection — mAP 97.25% — IEEE paper.</p>
     </div>
+
   </div>
 </section>
 
@@ -162,13 +173,15 @@
 <section id="skills" class="section fade-section">
   <h2>Skills</h2>
   <div class="skills-grid">
-    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /><p>Python</p></div>
-    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" /><p>PyTorch</p></div>
-    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" /><p>TensorFlow</p></div>
-    <div class="skill fade-section"><img src="https://raw.githubusercontent.com/ultralytics/assets/main/logo/ultralytics-icon.svg" /><p>YOLO</p></div>
-    <div class="skill fade-section"><img src="https://raw.githubusercontent.com/micropython/micropython/master/docs/_static/python-logo.png" /><p>MicroPython</p></div>
-    <div class="skill fade-section"><img src="https://raw.githubusercontent.com/p4lang/p4lang.github.io/master/images/p4-logo-light.png" /><p>P4</p></div>
-    <div class="skill fade-section"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/OpenFlow_logo.svg" /><p>SDN</p></div>
+
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><p>Python</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"><p>PyTorch</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"><p>TensorFlow</p></div>
+    <div class="skill fade-section"><img src="https://raw.githubusercontent.com/ultralytics/assets/main/logo/ultralytics-icon.svg"><p>YOLO</p></div>
+    <div class="skill fade-section"><img src="https://raw.githubusercontent.com/micropython/micropython/master/docs/_static/python-logo.png"><p>MicroPython</p></div>
+    <div class="skill fade-section"><img src="https://raw.githubusercontent.com/p4lang/p4lang.github.io/master/images/p4-logo-light.png"><p>P4</p></div>
+    <div class="skill fade-section"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/OpenFlow_logo.svg"><p>SDN</p></div>
+
   </div>
 </section>
 
@@ -181,14 +194,12 @@
       <li>
         <strong>Esophageal Cancer Detection using Hyperspectral Imaging</strong><br>
         <span class="pub-authors">Amey R. Avhad, et al.</span> — Diagnostics (Q1), 2025.<br>
-        <em>mAP: 93.4% vs WLI: 80.1% — ID early lesion detection using SAVE HSI dataset.</em><br>
-        DOI: <a href="#" class="pub-link">TBA</a>
+        <em>mAP: 93.4% vs WLI: 80.1% — early lesion detection under SAVE dataset.</em><br>
       </li>
       <li>
         <strong>Drone-based Building & Vehicle Detection using YOLOv5</strong><br>
         <span class="pub-authors">Amey R. Avhad, et al.</span> — IEEE ICACCV, 2024.<br>
         <em>mAP: 97.25% outperforming CNN baseline (78%).</em><br>
-        DOI: <a href="#" class="pub-link">TBA</a>
       </li>
     </ol>
   </div>
