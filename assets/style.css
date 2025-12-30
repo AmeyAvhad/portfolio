@@ -66,6 +66,7 @@ header{
 /* =========================================
    HERO SECTION
 ========================================= */
+/* ===== HERO ===== */
 .hero{
   padding-top:140px;
   padding-bottom:60px;
@@ -76,6 +77,8 @@ header{
 .hero-container{
   width:var(--section-width);
   margin:auto;
+  padding-top:1rem;
+  padding-bottom:1.5rem;
   display:flex;
   flex-wrap:wrap;
   justify-content:space-between;
@@ -85,19 +88,19 @@ header{
 }
 
 .hero-photo{
-  flex:0 1 260px;
+  flex:0 1 clamp(240px, 32vw, 360px);
   display:flex;
   justify-content:center;
   order:1;
 }
 
 .hero-photo img{
-  width:230px;
-  height:230px;
+  width:clamp(200px, 28vw, 330px);
+  height:clamp(200px, 28vw, 330px);
   object-fit:cover;
   border-radius:50%;
   border:3px solid var(--lav);
-  box-shadow:0 4px 16px var(--shadow);
+  box-shadow:0 6px 18px rgba(0,0,0,.45);
 }
 
 .intro{
@@ -115,6 +118,7 @@ header{
   .intro{text-align:center;}
   .hero-buttons{justify-content:center;}
 }
+
 
 .name{font-size:clamp(2rem,4vw,3rem);font-weight:700;}
 .tagline{font-size:clamp(1rem,1.8vw,1.3rem);margin:8px 0;color:var(--lav);}
