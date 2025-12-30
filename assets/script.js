@@ -28,24 +28,38 @@ document.querySelectorAll("#nav-menu a").forEach(link =>
 
 /* ===== Theme Toggle ===== */
 const themeToggle = document.getElementById("theme-toggle");
-const root = document.documentElement;
 const themeIcon = document.getElementById("theme-icon");
+const root = document.documentElement;
+
 let savedTheme = localStorage.getItem("theme") || "dark";
-if(savedTheme === "light"){root.classList.add("light");themeIcon.classList.replace("fa-sun","fa-moon");}
+if(savedTheme === "light"){
+  root.classList.add("light");
+  themeIcon.classList.replace("fa-sun", "fa-moon");
+}
+
 themeToggle.addEventListener("click", () => {
   const on = root.classList.toggle("light");
-  themeIcon.classList.replace(on?"fa-sun":"fa-moon", on?"fa-moon":"fa-sun");
+  themeIcon.classList.replace(on ? "fa-sun" : "fa-moon", on ? "fa-moon" : "fa-sun");
   localStorage.setItem("theme", on ? "light" : "dark");
 });
 
 /* ===== Floating Particles ===== */
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
-canvas.width = innerWidth; canvas.height = innerHeight;
+canvas.width = innerWidth;
+canvas.height = innerHeight;
+
 let particles = [];
 for (let i = 0; i < 60; i++){
-  particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*2+1,dx:(Math.random()-.5)*.6,dy:(Math.random()-.5)*.6});
+  particles.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 2 + 1,
+    dx: (Math.random() - 0.5) * 0.6,
+    dy: (Math.random() - 0.5) * 0.6
+  });
 }
+
 function animate(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
   ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--accent');
@@ -58,11 +72,15 @@ function animate(){
   requestAnimationFrame(animate);
 }
 animate();
-onresize=()=>{canvas.width=innerWidth;canvas.height=innerHeight;};
+onresize = () => {
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
+};
 
 /* ===== Dynamic ~/section indicator ===== */
 const navLeft = document.querySelector(".nav-left");
 const sections = document.querySelectorAll("section[id]");
+
 function updateSectionIndicator(){
   let current="";
   sections.forEach(sec=>{
@@ -84,7 +102,7 @@ const accentName = document.getElementById("accent-name");
 
 function setAccent(name, hex){
   document.documentElement.style.setProperty("--accent", hex);
-  accentName.textContent = name.charAt(0).toUpperCase()+name.slice(1);
+  accentName.textContent = name.charAt(0).toUpperCase() + name.slice(1);
   localStorage.setItem("accent", JSON.stringify({name,hex}));
 }
 
@@ -94,8 +112,7 @@ if(savedAccent){
   setAccent(name,hex);
 }
 
-/* desktop */
-accentBtn.addEventListener("click",()=>accentMenu.classList.toggle("active"));
+/* Desktop option click */
 document.querySelectorAll(".accent-option").forEach(opt=>{
   opt.addEventListener("click",()=>{
     setAccent(opt.dataset.color,opt.dataset.hex);
@@ -103,7 +120,7 @@ document.querySelectorAll(".accent-option").forEach(opt=>{
   });
 });
 
-/* mobile */
+/* Mobile dots */
 document.querySelectorAll(".dot").forEach(dot=>{
   dot.style.background = dot.dataset.hex;
   dot.addEventListener("click",()=>{
@@ -112,3 +129,6 @@ document.querySelectorAll(".dot").forEach(dot=>{
     dot.classList.add("selected");
   });
 });
+
+/* Open dropdown (desktop) */
+accentBtn.addEventListener("click",()=>accentMenu.classList.toggle("active"));

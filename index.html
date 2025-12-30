@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<!-- PARTICLES BACKGROUND -->
+<!-- PARTICLES -->
 <canvas id="particles"></canvas>
 
 <!-- NAV -->
@@ -32,34 +32,31 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#publications">Publications</a></li>
 
-      <!-- ☀️ / 🌙 toggle -->
+      <!-- THEME -->
       <li>
         <button id="theme-toggle" class="theme-btn">
           <i class="fa-solid fa-sun" id="theme-icon"></i>
         </button>
       </li>
 
-      <!-- 🎨 Accent Color Selector -->
+      <!-- ACCENT SELECTOR -->
       <li class="accent-wrapper">
         <button id="accent-toggle" class="accent-btn">
           🎨 <span id="accent-name">Lavender</span> ▼
         </button>
 
+        <!-- Desktop dropdown -->
         <div id="accent-menu" class="accent-menu">
           <div class="accent-option" data-color="rosewater" data-hex="#dc8a78">Rosewater</div>
           <div class="accent-option" data-color="flamingo" data-hex="#dd7878">Flamingo</div>
           <div class="accent-option" data-color="pink" data-hex="#ea76cb">Pink</div>
           <div class="accent-option" data-color="mauve" data-hex="#8839ef">Mauve</div>
           <div class="accent-option" data-color="lavender" data-hex="#7287fd">Lavender</div>
-          <div class="accent-option" data-color="red" data-hex="#d20f39">Red</div>
           <div class="accent-option" data-color="maroon" data-hex="#e64553">Maroon</div>
           <div class="accent-option" data-color="peach" data-hex="#fe640b">Peach</div>
-          <div class="accent-option" data-color="yellow" data-hex="#df8e1d">Yellow</div>
-          <div class="accent-option" data-color="green" data-hex="#40a02b">Green</div>
           <div class="accent-option" data-color="teal" data-hex="#179299">Teal</div>
           <div class="accent-option" data-color="sky" data-hex="#04a5e5">Sky</div>
           <div class="accent-option" data-color="sapphire" data-hex="#209fb5">Sapphire</div>
-          <div class="accent-option" data-color="blue" data-hex="#1e66f5">Blue</div>
         </div>
 
         <!-- MOBILE DOT GRID -->
@@ -69,15 +66,11 @@
           <div class="dot" data-color="pink" data-hex="#ea76cb"></div>
           <div class="dot" data-color="mauve" data-hex="#8839ef"></div>
           <div class="dot" data-color="lavender" data-hex="#7287fd"></div>
-          <div class="dot" data-color="red" data-hex="#d20f39"></div>
           <div class="dot" data-color="maroon" data-hex="#e64553"></div>
           <div class="dot" data-color="peach" data-hex="#fe640b"></div>
-          <div class="dot" data-color="yellow" data-hex="#df8e1d"></div>
-          <div class="dot" data-color="green" data-hex="#40a02b"></div>
           <div class="dot" data-color="teal" data-hex="#179299"></div>
           <div class="dot" data-color="sky" data-hex="#04a5e5"></div>
           <div class="dot" data-color="sapphire" data-hex="#209fb5"></div>
-          <div class="dot" data-color="blue" data-hex="#1e66f5"></div>
         </div>
       </li>
     </ul>
@@ -110,7 +103,7 @@
   </div>
 </section>
 
-<!-- EXPERIENCE — ORIGINAL CONTENT RESTORED EXACTLY -->
+<!-- EXPERIENCE -->
 <section id="experience" class="section fade-section">
   <h2>Experience</h2>
 
@@ -167,7 +160,6 @@
       </ul>
     </div>
   </div>
-
 </section>
 
 <!-- EDUCATION -->
@@ -186,27 +178,70 @@
 <!-- PROJECTS -->
 <section id="projects" class="section fade-section">
   <h2>Projects</h2>
-  <div class="project-container">
+
+  <div class="project-grid">
+    
+    <!-- Project 1 -->
     <div class="project-card card fade-section">
-      <h3 class="role-title">Assistive Robotic Arm</h3>
-      <p>Voice + CV controlled robotic arm — Kinova Gen2, Whisper, YOLO-E</p>
+      <img src="assets/prj_roboticarm.jpg" class="project-img" alt="Assistive Robotic Arm">
+      <div class="project-content">
+        <h3 class="project-title">Assistive Robotic Arm</h3>
+        <p class="project-desc">Voice + CV controlled robotic arm using Kinova Gen2, Whisper, YOLO-E</p>
+        <div class="project-tags">
+          <span class="tag">ai</span>
+          <span class="tag">robotics</span>
+          <span class="tag">pytorch</span>
+          <span class="tag">ros</span>
+        </div>
+      </div>
     </div>
+
+    <!-- Project 2 -->
     <div class="project-card card fade-section">
-      <h3 class="role-title">PillCounter App</h3>
-      <p>YOLOv8 pill counter — PyQt realtime pharma automation</p>
+      <img src="assets/prj_pillcounter.jpg" class="project-img" alt="BCD">
+      <div class="project-content">
+        <h3 class="project-title">Brain Tumor Classification</h3>
+        <p class="project-desc">A machine-learning project that trains and evaluates multiple deep-learning classifiers (YOLOv5, YOLOv8, EfficientNet, Roboflow 2.0) for detecting and classifying brain tumor types from MRI images.</p>
+        <div class="project-tags">
+          <span class="tag">cv</span>
+          <span class="tag">ai</span>
+          <span class="tag">yolo</span>
+          <span class="tag">python</span>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="project-container">
+
+    <!-- Project 3 -->
     <div class="project-card card fade-section">
-      <h3 class="role-title">Esophageal Cancer Detection – HSI</h3>
-      <p>SAVE dataset beats WLI detection dramatically</p>
+      <img src="assets/prj_hsi.jpg" class="project-img" alt="ESCC HSI">
+      <div class="project-content">
+        <h3 class="project-title">Esophageal Cancer Detection</h3>
+        <p class="project-desc">Hyperspectral Imaging + CNN/YOLO comparative research</p>
+        <div class="project-tags">
+          <span class="tag">medical-ai</span>
+          <span class="tag">research</span>
+          <span class="tag">python</span>
+        </div>
+      </div>
     </div>
+
+    <!-- Project 4 -->
     <div class="project-card card fade-section">
-      <h3 class="role-title">Drone Object Detector</h3>
-      <p>YOLOv5 aerial detector — mAP 97.25%</p>
+      <img src="assets/prj_drone.jpg" class="project-img" alt="Drone Detector">
+      <div class="project-content">
+        <h3 class="project-title">Drone Object Detector</h3>
+        <p class="project-desc">YOLOv5 aerial detector — mAP 97.25%</p>
+        <div class="project-tags">
+          <span class="tag">vision</span>
+          <span class="tag">ai</span>
+          <span class="tag">drone</span>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
+
 
 <!-- SKILLS -->
 <section id="skills" class="section fade-section">
@@ -215,15 +250,24 @@
     <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /><p>Python</p></div>
     <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" /><p>PyTorch</p></div>
     <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" /><p>TensorFlow</p></div>
-    <div class="skill fade-section"><img src="https://raw.githubusercontent.com/ultralytics/assets/main/logo/ultralytics-icon.svg" /><p>YOLO</p></div>
-    <div class="skill fade-section"><img src="https://raw.githubusercontent.com/micropython/micropython/master/docs/_static/python-logo.png" /><p>MicroPython</p></div>
-    <div class="skill fade-section"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/OpenFlow_logo.svg" /><p>SDN</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-plain.svg" /><p>C++</p></div>
+    <div class="skill fade-section"><img src="assets/MicroPython_new_logo.svg" /><p>MicroPython</p></div>
+    <div class="skill fade-section"><img src="assets/software-defined-networking-icon-vector.svg" /><p>SDN</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-plain.svg" /><p>Linux</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-plain.svg" /><p>OpenCV</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-plain-wordmark.svg" /><p>Jupyter</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" /><p>Github</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-plain.svg" /><p>Arduino</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ssh/ssh-original.svg" /><p>SSH</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" /><p>AWS</p></div>
+    <div class="skill fade-section"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" /><p>MySQL</p></div>
   </div>
 </section>
 
-<!-- PUBLICATIONS -->
+<!-- PUBLICATIONS (SPLIT INTO 2 CARDS) -->
 <section id="publications" class="section fade-section">
   <h2>Publications</h2>
+
   <div class="card">
     <ol class="pub-list">
       <li>
@@ -233,6 +277,11 @@
         <em>mAP = 93.4%, Sensitivity boost for early cancer lesions</em><br>
         DOI: <a href="https://doi.org/10.3390/diagnostics15131686" class="pub-link" target="_blank">Link</a>
       </li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <ol class="pub-list">
       <li>
         <strong>Drone-based Vehicle and Building Detection using YOLOv5</strong><br>
         <span class="pub-authors">Amey R. Avhad, et al.</span> — IEEE ICACCV 2024.<br>
