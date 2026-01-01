@@ -385,4 +385,14 @@ footer{
   color:var(--bg);
 }
 
+.visitor-counter {
+  height: 22px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.visitor {
+  margin-left: 18px;
+  color: var(--accent);
+  font-weight: 600;
+}
 
